@@ -28,3 +28,13 @@ if a==0 or b==1:
 
 
 
+
+
+def testReturn1():
+    return 1
+
+
+if testReturn1() == 1:
+    print('正しい')
+else:
+    print('正しくない')

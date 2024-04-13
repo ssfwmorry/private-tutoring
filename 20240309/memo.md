@@ -70,36 +70,35 @@ import unittest
 
 class TestApp(unittest, TestCate):
     def test_one(self):
-        actual = "Sunday"
+        actual = selfFunc()
         expected = "Monday"
-        # 何
+        assert actual == expected
 '''
 結果
-AssertionError: 'Sunday' != 'Monday'
-- Sunday
-+ Monday
+AssertionError:
 '''
 ```
-
-1. self.assert(actual == expected)
-2. self.assertEqual(actual, expected)
-3. self.assertEqual(actual == expected)
-4. assert actual == expected
 
 ## 38
 
 コードを実行して、以下の結果が得られる時、`# 何` に入るものは?
 
 ```python
-text = [f"{i} sheep jumped a fence." for in range(1, 4)]
+# text = [f"{i} sheep jumped a fence." for in range(1, 4)]
+text = [ "0 sheep jumped a fence.",
+         "1 sheep jumped a fence.",
+         "2 sheep jumped a fence.",
+         "3 sheep jumped a fence."  ]
 
 # 何
 
 '''
 結果
-1 sheep jumped a fence.,
-2 sheep jumped a fence.,
-3 sheep jumped a fence.
+[
+    "1 sheep jumped a fence.",
+    "2 sheep jumped a fence.",
+    "3 sheep jumped a fence."
+]
 '''
 ```
 
@@ -107,12 +106,13 @@ text = [f"{i} sheep jumped a fence." for in range(1, 4)]
 `import textwrap` <br />
 `print(textwrap.fill(", ".join(text), width=24))`
 
-2.<br />
-`print(text)`
-
-3.<br />
-`import pprint` <br />
-`pprint.print(text)`
-
 4.<br />
 `print("\n".join(text))`
+
+a= [1,2,3]
+(", ".join(text))
+
+0 sheep jumped a fence.,
+1 sheep jumped a fence.,
+2 sheep jumped a fence.,
+3 sheep jumped a fence.
